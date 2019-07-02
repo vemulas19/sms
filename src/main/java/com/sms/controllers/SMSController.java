@@ -24,8 +24,9 @@ public class SMSController {
 		System.out.println("Message to deliver is : " + text);
 
 		RestTemplate rt = new RestTemplate();
-		String url = "https://api.textlocal.in/send?apiKey=gQlRv2snAak-kSi4acq1NxRQmS9IKFK4rFGfa23s9e&sender=TXTLCL&numbers="
-				+ mbl + "&message=" + text;
+		String url = "http://localhost:8080/message-service/service/v2/message/sendSms?";
+				url = url.concat("mbl=").concat(mbl);
+				url = url.concat("&text=").concat(text);
 
 		HttpHeaders headers = new HttpHeaders();
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
