@@ -19,7 +19,7 @@ Remainding Balance : ${smsResponse.balance}
 <font color="red">
 <c:forEach var="warning" items="${smsResponse.errors}">
       	${warning.message}
-    </c:forEach>
+    </c:forEach> 
 </font>
 <form action="sendSMS" method="post">
 <table>
