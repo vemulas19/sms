@@ -38,7 +38,7 @@ public class User {
 
 	//populate cities from database
 	public void init() {
-		System.out.println("Triggered init method!!");
+		System.out.println("Triggered init method from User!!");
 		System.out.println("Cities after creating an object : " + this.getCities());
 		List<String> citiesFromDb = new ArrayList<>();
 		citiesFromDb.add("Hyderabad");
@@ -50,7 +50,7 @@ public class User {
 	}
 	
 	public void destroy() {
-		System.out.println("Triggered destroy method!!");
+		System.out.println("Triggered destroy method from User!!");
 		this.cities = null;
 	}
 }

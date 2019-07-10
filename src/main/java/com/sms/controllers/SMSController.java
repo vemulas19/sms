@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.google.gson.Gson;
 import com.sms.pojo.SmsResponse;
+import com.sms.pojo.Student;
 import com.sms.pojo.User;
 
 @Controller
@@ -21,6 +22,9 @@ public class SMSController {
 
 	@Autowired
 	private User user;
+	
+	@Autowired
+	private Student student;
 	
 	@RequestMapping(value="/testLifeCycle")
 	public String testLife() {
