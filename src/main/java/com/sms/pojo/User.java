@@ -44,7 +44,7 @@ public class User {
 		citiesFromDb.add("Hyderabad");
 		citiesFromDb.add("Pune");
 		citiesFromDb.add("Chennai");
-		citiesFromDb.add("Banglore");
+		citiesFromDb.add("Banglore  ");
 		
 		this.setCities(citiesFromDb);
 	}
