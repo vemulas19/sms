@@ -12,13 +12,14 @@
 Status : ${smsResponse.status} </br>
 </font>
 </br>
-<font color="red">
+<font color="blue">
 Remainding Balance : ${smsResponse.balance}
 </font>
-<font color="blue">
-<c:forEach var="warning" items="${smsResponse.warnings}">
+</br>
+<font color="red">
+<c:forEach var="warning" items="${smsResponse.errors}">
       	${warning.message}
-    </c:forEach>
+    </c:forEach> 
 </font>
 <form action="sendSMS" method="post">
 <table>
