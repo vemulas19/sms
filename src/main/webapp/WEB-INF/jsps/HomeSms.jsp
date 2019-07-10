@@ -39,5 +39,8 @@ Remainding Balance : ${smsResponse.balance}
 </tr>
 </table>
 </form>
+<form action="testLifeCycle">
+ <input type="submit" value="Test Life"/>
+</form>
 </body>
 </html>

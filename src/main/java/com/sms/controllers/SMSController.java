@@ -1,5 +1,6 @@
 package com.sms.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -13,10 +14,27 @@ import org.springframework.web.client.RestTemplate;
 
 import com.google.gson.Gson;
 import com.sms.pojo.SmsResponse;
+import com.sms.pojo.User;
 
 @Controller
 public class SMSController {
 
+	@Autowired
+	private User user;
+	
+	@RequestMapping(value="/testLifeCycle")
+	public String testLife() {
+	
+		System.out.println("Entered into testLife!!");
+		
+		System.out.println(user.getName());
+		System.out.println(user.getSalary());
+		
+		user.getCities().forEach(System.out::println);
+		
+		return "HomeSms";
+	}
+	
 	@RequestMapping(value = "/sendSMS", method = RequestMethod.POST)
 	public String sendSMS(Model model, @RequestParam("mobile") String mbl, @RequestParam("textMessage") String text) {
 
@@ -37,4 +55,5 @@ public class SMSController {
 		model.addAttribute("smsResponse", smsResponse);
 		return "HomeSms";
 	}
+	
 }
