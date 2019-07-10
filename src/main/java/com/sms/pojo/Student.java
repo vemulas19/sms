@@ -10,7 +10,7 @@ public class Student {
 	private String name;
 	private String collegeName;
 
-	public int getStdId() {
+	public int getStdId() {  
 		return stdId;
 	}
 

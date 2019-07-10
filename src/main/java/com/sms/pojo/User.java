@@ -11,7 +11,7 @@ public class User {
 	private String name;
 	private String salary;
 	private List<String> cities;
-
+  
 	public String getName() {
 		return name;
 	}

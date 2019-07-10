@@ -10,7 +10,7 @@ public class PostProcessor implements BeanPostProcessor {
 	@Override
 	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 		if(bean instanceof User) {
-			System.out.println("Helo User!! This call from Before init method!!");
+			System.out.println("Helo User!! This call from Before init method!!"); 
 		}
 		return bean;
 	}

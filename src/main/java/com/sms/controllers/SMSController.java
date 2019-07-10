@@ -24,7 +24,7 @@ public class SMSController {
 	private User user;
 	
 	@Autowired
-	private Student student;
+	private Student student; 
 	
 	@RequestMapping(value="/testLifeCycle")
 	public String testLife() {
